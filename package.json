@@ -1,0 +1,49 @@
+{
+  "name": "browersify-shim-multiple",
+  "version": "0.0.0",
+  "description": "Sample project to showcase browserify-shim's (lack of) support for multiple bundles",
+  "main": "./server.js",
+  "scripts": {
+    "server": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabegorelick/browserify-shim-multiple.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabegorelick/browserify-shim-multiple/issues"
+  },
+  "homepage": "https://github.com/gabegorelick/browserify-shim-multiple",
+  "dependencies": {
+    "browserify": "~3.38.1",
+    "browserify-middleware": "~2.5.0",
+    "browserify-shim": "~3.4.1",
+    "jquery": "~2.1.0",
+    "express": "~3.5.1",
+    "ejs": "~1.0.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "angular": "./bower_components/angular/angular.js",
+    "angular-resource": "./bower_components/angular-resource/angular-resource.js"
+  },
+  "browserify-shim": {
+    "angular": {
+      "exports": "angular",
+      "depends": [
+        "jquery:jQuery"
+      ]
+    },
+    "angular-resource": {
+      "depends": [
+        "angular:angular"
+      ]
+    }
+  }
+}
