@@ -1,1 +1,1 @@
-Run with `npm run server`. If everything's working, there should be no JavaScript errors.
+Run with `npm run test`. If everything is working, there should be no JavaScript errors.

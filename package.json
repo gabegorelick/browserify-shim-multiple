@@ -4,7 +4,7 @@
   "description": "Sample project to showcase browserify-shim's (lack of) support for multiple bundles",
   "main": "./server.js",
   "scripts": {
-    "server": "node server.js"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -45,5 +45,10 @@
         "angular:angular"
       ]
     }
+  },
+  "devDependencies": {
+    "gulp": "~3.6.0",
+    "gulp-util": "~2.2.14",
+    "open": "0.0.5"
   }
 }
