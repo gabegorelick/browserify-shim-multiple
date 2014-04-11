@@ -31,7 +31,9 @@
   },
   "browser": {
     "angular": "./bower_components/angular/angular.js",
-    "angular-resource": "./bower_components/angular-resource/angular-resource.js"
+    "angular-resource": "./bower_components/angular-resource/angular-resource.js",
+    "d3": "./bower_components/d3/d3.js",
+    "nvd3": "./bower_components/nvd3/nv.d3.js"
   },
   "browserify-shim": {
     "angular": {
@@ -43,6 +45,15 @@
     "angular-resource": {
       "depends": [
         "angular:angular"
+      ]
+    },
+    "d3": {
+      "exports": "d3"
+    },
+    "nvd3": {
+      "exports": "nv",
+      "depends": [
+        "d3:d3"
       ]
     }
   },

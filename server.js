@@ -11,7 +11,10 @@ app.get('/', function (req, res) {
   res.render('index.html');
 });
 
-var libs = ['jquery', 'angular', 'angular-resource'];
+var libs = Object.keys(require('./package.json').browser).concat('jquery');
+console.log('External libs:');
+console.dir(libs);
+
 app.use('/public/app.js', browserify(__dirname + '/public/app.js', {
   external: libs
 }));
